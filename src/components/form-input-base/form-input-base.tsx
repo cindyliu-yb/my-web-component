@@ -1,4 +1,4 @@
-import { Component, Element, Prop, PropDidChange } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Prop, PropDidChange } from '@stencil/core';
 
 @Component({
   tag: 'form-input-base',
@@ -12,6 +12,8 @@ export class FormInputBase {
 
   @Prop({ mutable: true }) value: string;
 
+  @Event() valueChange: EventEmitter;
+
   // propagate model change to the view
   @PropDidChange('value')
   valueChanged() {
@@ -24,12 +26,13 @@ export class FormInputBase {
 
   inputChanged(ev: any) {
     this.value = ev.target && ev.target.value;
+    this.valueChange.emit(this.value);
     console.log('View to Model');
   }
 
   render() {
     return (
-      <input onInput={this.inputChanged.bind(this)}></input>
+      <input value={this.value} onInput={this.inputChanged.bind(this)}></input>
     );
   }
 }
