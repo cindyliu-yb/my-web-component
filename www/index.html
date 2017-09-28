@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
-  <script src="/build/myname.js"></script>
+  <script src="/build/forminputbase.js"></script>
 
   <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
 
 </head>
 <body>
 
-  <my-name first="Stencil" last="JS"></my-name>
+  <form-input-base></form-input-base>
 
 
   <script>
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
       // auto-unregister service worker during dev mode
       navigator.serviceWorker.ready.then(registration => {
         registration.unregister().then(() => {

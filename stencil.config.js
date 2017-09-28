@@ -1,8 +1,8 @@
 exports.config = {
-  namespace: 'myname',
+  namespace: 'forminputbase',
   generateDistribution: true,
   bundles: [
-    { components: ['my-name'] }
+    { components: ['form-input-base'] }
   ]
 };
 

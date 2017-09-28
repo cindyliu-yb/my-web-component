@@ -1,9 +1,9 @@
 /*! Built with http://stenciljs.com */
-my-name {
+form-input-base {
   font-family: Courier New, Courier, monospace;
   font-weight: bold;
 }
 
-my-name.💎 {
+form-input-base.💎 {
   visibility: inherit;
 }

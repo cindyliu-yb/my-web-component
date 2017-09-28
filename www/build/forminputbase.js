@@ -29,4 +29,4 @@
     x.setAttribute('data-path', publicPath);
     x.setAttribute('data-core', appCore);
     document.head.appendChild(x);
-})(window, document, "myname","/build/myname/","myname.core.js","myname.core.pf.js",[["MY-NAME","my-name",{"$":"my-name"},[["first",1],["last",1]]]]);
+})(window, document, "forminputbase","/build/forminputbase/","forminputbase.core.js","forminputbase.core.pf.js",[["FORM-INPUT-BASE","form-input-base",{"$":"form-input-base"},[["first",1],["last",1]]]]);

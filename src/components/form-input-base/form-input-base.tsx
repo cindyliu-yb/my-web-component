@@ -2,10 +2,10 @@ import { Component, Prop } from '@stencil/core';
 
 
 @Component({
-  tag: 'my-name',
-  styleUrl: 'my-name.scss'
+  tag: 'form-input-base',
+  styleUrl: 'form-input-base.scss'
 })
-export class MyName {
+export class FormInputBase {
 
   @Prop() first: string;
 
@@ -13,9 +13,7 @@ export class MyName {
 
   render() {
     return (
-      <p>
-        Hello, my name is {this.first} {this.last}
-      </p>
+      <input></input>
     );
   }
 }
