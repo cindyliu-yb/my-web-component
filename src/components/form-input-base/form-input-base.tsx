@@ -1,5 +1,4 @@
-import { Component, Prop } from '@stencil/core';
-
+import { Component, Element, Prop, PropDidChange } from '@stencil/core';
 
 @Component({
   tag: 'form-input-base',
@@ -7,13 +6,30 @@ import { Component, Prop } from '@stencil/core';
 })
 export class FormInputBase {
 
-  @Prop() first: string;
+  @Element() el: HTMLElement;
 
-  @Prop() last: string;
+  @Prop() type: string = 'text';
+
+  @Prop({ mutable: true }) value: string;
+
+  // propagate model change to the view
+  @PropDidChange('value')
+  valueChanged() {
+    const inputEl = this.el.querySelector('input');
+    if (inputEl.value !== this.value) {
+      inputEl.value = this.value;
+      console.log('Model to View');
+    }
+  }
+
+  inputChanged(ev: any) {
+    this.value = ev.target && ev.target.value;
+    console.log('View to Model');
+  }
 
   render() {
     return (
-      <input></input>
+      <input onInput={this.inputChanged.bind(this)}></input>
     );
   }
 }

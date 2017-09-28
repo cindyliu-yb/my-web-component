@@ -3,23 +3,23 @@
   "components": [
     [
       "FORM-INPUT-BASE",
-      "form-input-base",
+      "prhqk8ae",
       {
-        "$": "form-input-base"
+        "$": "g4rb5zl8"
       },
       [
         [
-          "first",
+          "type",
           1
         ],
         [
-          "last",
-          1
+          "value",
+          2
         ]
       ]
     ]
   ],
   "loader": "forminputbase.js",
-  "core": "forminputbase/forminputbase.core.js",
-  "corePolyfilled": "forminputbase/forminputbase.core.pf.js"
+  "core": "forminputbase/forminputbase.hzldpbl7.js",
+  "corePolyfilled": "forminputbase/forminputbase.jrmprzsd.pf.js"
 }
