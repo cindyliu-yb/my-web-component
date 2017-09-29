@@ -19,7 +19,6 @@ var FormInputBase = /** @class */ (function () {
         else {
             this.value = val;
         }
-        this.value = ev.target && ev.target.value;
         // add a setter for the value
         this.valueChange.emit(this.value);
     };
