@@ -5,21 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
   <script src="/build/forminputbase.js"></script>
-
+  <script src="https://unpkg.com/vue"></script>
   <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
-
 </head>
 <body>
+  <div id="app-1">
+     <ol> 
+       <sample-form-input 
+        v-for="item in fields"
+        v-bind:field="item"
+        v-model="item.value"
+        v-bind:key="item.id">
+      </sample-form-input> 
+     </ol> 
+    <div>{{ formValue }}</div>
+  </div>
 
-  <form-input-base></form-input-base>
-
+  <script src="/index.js"></script>
 
   <script>
     if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(reg => console.log('service worker registered', reg))
-          .catch(err => console.log('service worker error', err));
+      // auto-unregister service worker during dev mode
+      navigator.serviceWorker.ready.then(registration => {
+        registration.unregister().then(() => {
+          location.reload(true);
+        });
       });
     }
   </script>

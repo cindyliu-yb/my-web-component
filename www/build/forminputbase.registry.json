@@ -3,9 +3,9 @@
   "components": [
     [
       "FORM-INPUT-BASE",
-      "9gxjmigk",
+      "form-input-base",
       {
-        "$": "g4rb5zl8"
+        "$": "form-input-base"
       },
       [
         [
@@ -20,6 +20,6 @@
     ]
   ],
   "loader": "forminputbase.js",
-  "core": "forminputbase/forminputbase.hzldpbl7.js",
-  "corePolyfilled": "forminputbase/forminputbase.jrmprzsd.pf.js"
+  "core": "forminputbase/forminputbase.core.js",
+  "corePolyfilled": "forminputbase/forminputbase.core.pf.js"
 }

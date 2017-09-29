@@ -2,4 +2,10 @@
 form-input-base {
   font-family: Courier New, Courier, monospace;
   font-weight: bold;
+  input {
+    height: 30px;
+    width: 80%;
+    margin: 10px 0px;
+    border: 1px solid grey;
+  }
 }

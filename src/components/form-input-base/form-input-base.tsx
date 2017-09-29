@@ -20,19 +20,19 @@ export class FormInputBase {
     const inputEl = this.el.querySelector('input');
     if (inputEl.value !== this.value) {
       inputEl.value = this.value;
-      console.log('Model to View');
     }
   }
 
   inputChanged(ev: any) {
     this.value = ev.target && ev.target.value;
     this.valueChange.emit(this.value);
-    console.log('View to Model');
   }
 
   render() {
     return (
-      <input value={this.value} onInput={this.inputChanged.bind(this)}></input>
+      <div>
+        <input value={this.value} onInput={this.inputChanged.bind(this)}></input>
+      </div>
     );
   }
 }
