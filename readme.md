@@ -1,4 +1,4 @@
-** A Sample Project to Use Web Component in Vuejs **
+### A Sample Project to Use Web Component in Vuejs ###
 
 ```bash
 npm install
