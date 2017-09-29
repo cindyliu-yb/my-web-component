@@ -1,0 +1,33 @@
+{
+  "namespace": "forminputbase",
+  "components": [
+    [
+      "FORM-INPUT-BASE",
+      "form-input-base",
+      {
+        "$": "form-input-base"
+      },
+      [
+        [
+          "label",
+          1
+        ],
+        [
+          "theme",
+          1
+        ],
+        [
+          "type",
+          1
+        ],
+        [
+          "value",
+          2
+        ]
+      ]
+    ]
+  ],
+  "loader": "forminputbase.js",
+  "core": "forminputbase/forminputbase.core.js",
+  "corePolyfilled": "forminputbase/forminputbase.core.pf.js"
+}
