@@ -21,6 +21,40 @@
     <div>{{ formValue }}</div>
   </div>
 
-  <script src="/index.js"></script>
+  <script>
+  Vue.config.ignoredElements = [
+      'form-input-base'
+  ]
+
+  Vue.component('sample-form-input', {
+      props: ['field', 'value'],
+      template: '<form-input-base :theme="field.theme" :mode="field.mode" :label="field.label" :value="value" @valueChange="onValueChange"></form-input-base>',
+      methods: {
+          onValueChange: function(ev) {
+              this.$emit('input', ev.target.value)
+          }
+      }
+  })
+  var app7 = new Vue({
+      el: '#app-1',
+      data: {
+          fields: [
+              {label: 'Name', type: 'text', controlName: 'name', value: 'Cindy', mode: 'web', theme: 'green'},
+              {label: 'Street', type: 'text', controlName: 'street', value: '8 Scrubs Lane', mode: 'web', theme: 'green'},
+              {label: 'City', type: 'text', controlName: 'city', value: 'London', mode: 'web', theme: 'red'},
+              {label: 'State', type: 'select', controlName: 'state', value: 'UK', mode: 'mobile', theme: 'red'},
+              {label: 'Zip', type: 'number', controlName: 'zip', value: 'NW6 5RB', mode: 'mobile'}
+          ]
+      },
+      computed: {
+          formValue: function() {
+              return this.fields.reduce((accu, f) => {
+                  accu[f.label] = f.value
+                  return accu
+              }, {})
+          }
+      }
+  })
+  </script>
 </body>
 </html>

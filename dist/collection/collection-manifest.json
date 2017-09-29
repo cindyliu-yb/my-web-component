@@ -1,0 +1,56 @@
+{
+  "components": [
+    {
+      "tag": "form-input-base",
+      "componentClass": "FormInputBase",
+      "componentPath": "components/form-input-base/form-input-base.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/form-input-base/form-input-base.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "label"
+        },
+        {
+          "name": "theme"
+        },
+        {
+          "name": "type"
+        },
+        {
+          "name": "value",
+          "mutable": true
+        }
+      ],
+      "propsDidChange": [
+        {
+          "name": "value",
+          "method": "valueChanged"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "events": [
+        {
+          "event": "valueChange"
+        }
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "components": [
+        "form-input-base"
+      ]
+    }
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.0.6-0"
+  }
+}

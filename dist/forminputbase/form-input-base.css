@@ -1,0 +1,28 @@
+/*! Built with http://stenciljs.com */
+form-input-base {
+  font-family: Courier New, Courier, monospace;
+  font-weight: bold;
+}
+
+form-input-base input {
+  height: 30px;
+  width: 80%;
+  margin: 10px 0px;
+  border: 1px solid grey;
+}
+
+.dark {
+  color: black;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+form-input-base.💎 {
+  visibility: inherit;
+}
